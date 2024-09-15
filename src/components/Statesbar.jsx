@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ResponsiveLine } from "@nivo/line";
 import { ResponsiveBar } from "@nivo/bar";
-import { useTheme, MenuItem, Select, FormControl, InputLabel } from "@mui/material";
+import { useTheme, MenuItem, Select, FormControl, InputLabel, useMediaQuery } from "@mui/material";
 import { tokens } from "../theme";
 import { mockLineData } from "../data/mockData";
 
@@ -32,8 +32,11 @@ const ChartsWithDropdown = () => {
     setSelectedState(event.target.value);
   };
 
+  // Check if the screen size is mobile
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
-    <div>
+    <div style={{ padding: isMobile ? "10px" : "20px" }}>
       {/* Dropdown for state selection */}
       <FormControl fullWidth variant="outlined" style={{ marginBottom: "20px" }}>
         <InputLabel id="state-select-label">Select State</InputLabel>
@@ -52,9 +55,21 @@ const ChartsWithDropdown = () => {
       </FormControl>
 
       {/* Container for charts */}
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ 
+        display: "flex", 
+        flexDirection: isMobile ? "column" : "row", // Stack vertically on mobile
+        gap: "20px",
+        overflow: "hidden",
+        justifyContent: "center",
+        marginLeft: isMobile ? "0" : "auto", // Remove left margin on mobile
+        marginRight: isMobile ? "0" : "auto" // Remove right margin on mobile
+      }}>
         {/* Line Chart */}
-        <div style={{ height: "500px", width: "45%" }}>
+        <div style={{ 
+          height: "500px", 
+          width: isMobile ? "110%" : "500px", // Full width on mobile
+          minWidth: isMobile ? "0" : "auto" // Adjust minWidth for mobile
+        }}>
           <ResponsiveLine
             data={[{ id: selectedState, data: getStateData(selectedState) }]}
             theme={{
@@ -131,38 +146,43 @@ const ChartsWithDropdown = () => {
             pointBorderColor={{ from: "serieColor" }}
             pointLabelYOffset={-12}
             useMesh={true}
-            legends={[
-              {
-                anchor: "bottom-right",
-                direction: "column",
-                justify: false,
-                translateX: 100,
-                translateY: 0,
-                itemsSpacing: 0,
-                itemDirection: "left-to-right",
-                itemWidth: 80,
-                itemHeight: 20,
-                itemOpacity: 0.75,
-                symbolSize: 12,
-                symbolShape: "circle",
-                symbolBorderColor: "rgba(0, 0, 0, .5)",
-                effects: [
-                  {
-                    on: "hover",
-                    style: {
-                      itemBackground: "rgba(0, 0, 0, .03)",
-                      itemOpacity: 1,
-                    },
-                  },
-                ],
-              },
-            ]}
+            // legends={[
+            //   {
+            //     anchor: "bottom-right",
+            //     direction: "column",
+            //     justify: false,
+            //     translateX: 100,
+            //     translateY: 0,
+            //     itemsSpacing: 0,
+            //     itemDirection: "left-to-right",
+            //     itemWidth: 80,
+            //     itemHeight: 20,
+            //     itemOpacity: 0.75,
+            //     symbolSize: 12,
+            //     symbolShape: "circle",
+            //     symbolBorderColor: "rgba(0, 0, 0, .5)",
+            //     effects: [
+            //       {
+            //         on: "hover",
+            //         style: {
+            //           itemBackground: "rgba(0, 0, 0, .03)",
+            //           itemOpacity: 1,
+            //         },
+            //       },
+            //     ],
+            //   },
+            // ]}
           />
         </div>
 
         {/* Bar Chart */}
-        <div style={{ height: "500px", width: "45%" }}>
-          <ResponsiveBar
+        <div style={{ 
+          height: "400px", 
+          width: isMobile ? "110%" : "700px", // Full width on mobile
+          minWidth: isMobile ? "0" : "auto", // Adjust minWidth for mobile
+          marginTop:"60px"
+        }}>
+          <ResponsiveBar 
             data={getBarChartData(selectedState)}
             theme={{
               axis: {
@@ -229,30 +249,30 @@ const ChartsWithDropdown = () => {
               from: "color",
               modifiers: [["darker", 1.6]],
             }}
-            legends={[
-              {
-                dataFrom: "keys",
-                anchor: "bottom-right",
-                direction: "column",
-                justify: false,
-                translateX: 120,
-                translateY: 0,
-                itemsSpacing: 2,
-                itemWidth: 100,
-                itemHeight: 20,
-                itemDirection: "left-to-right",
-                itemOpacity: 0.85,
-                symbolSize: 20,
-                effects: [
-                  {
-                    on: "hover",
-                    style: {
-                      itemOpacity: 1,
-                    },
-                  },
-                ],
-              },
-            ]}
+            // legends={[
+            //   {
+            //     dataFrom: "keys",
+            //     anchor: "bottom-right",
+            //     direction: "column",
+            //     justify: false,
+            //     translateX: 120,
+            //     translateY: 0,
+            //     itemsSpacing: 2,
+            //     itemWidth: 100,
+            //     itemHeight: 20,
+            //     itemDirection: "left-to-right",
+            //     itemOpacity: 0.85,
+            //     symbolSize: 20,
+            //     effects: [
+            //       {
+            //         on: "hover",
+            //         style: {
+            //           itemOpacity: 1,
+            //         },
+            //       },
+            //     ],
+            //   },
+            // ]}
             role="application"
             barAriaLabel={function (e) {
               return e.id + ": " + e.formattedValue + " in year: " + e.indexValue;

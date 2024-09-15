@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ForecastForm.css'
 
 // Sample JSON Data
 const data = {
@@ -116,7 +117,7 @@ function ForecastForm() {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto', textAlign: 'center', position:"relative",left:"20px"}}>
       <h1>Forecast Reservoir Capacity</h1>
       <form onSubmit={handleSearch}>
         <select 
@@ -143,7 +144,7 @@ function ForecastForm() {
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
       {stateData && (
-        <div style={{ marginTop: '20px', textAlign: 'left',fontSize:"20px" }}>
+        <div  className='hi'>
           <h3>{selectedState} Forecast Data</h3>
           <p><strong>Predicted Year:</strong> {stateData.predicted_year}</p>
           <p><strong>Current Requirement:</strong> {stateData.current_requirement} million cubic meters</p>

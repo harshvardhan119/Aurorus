@@ -182,7 +182,7 @@ function SearchStateForm() {
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
       {stateData && (
-        <div style={{ textAlign: 'left', marginTop: '20px',fontSize:"20px" }}>
+        <div style={{ textAlign: 'left', marginTop: '20px',fontSize:"20px",padding:'20px', color:'black'}} className='hi'>
           <h2>{selectedState} Data</h2>
           <p><strong>Year:</strong> {stateData.year}</p>
           <p><strong>Population Density:</strong> {stateData.population_density}</p>

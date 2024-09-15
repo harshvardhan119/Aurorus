@@ -8,6 +8,10 @@ body,
   height: 100%;
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
 }
 
 .app {
@@ -35,12 +39,120 @@ body,
 }
 
 .mapa{
-  width: 700px;
+
   position:relative;
   left:250px;
   height: 1000px;
+  width: 1000px;
 }
 .aa .bb .cc{
   width: 50px;
   height: 50px;
+}
+.ha{
+ 
+background: rgba(15, 10, 10, 0.39);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.5px);
+-webkit-backdrop-filter: blur(8.5px);
+border: 1px solid rgba(15, 10, 10, 0.37);
+}
+.hi{
+  background: rgba(255, 255, 255, 1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.5px);
+-webkit-backdrop-filter: blur(8.5px);
+border: 1px solid rgba(15, 10, 10, 0.37);
+}
+
+
+
+.topbar {
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    left: 0 !important;
+    width: 100% !important;
+    padding: 8px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+
+  .MuiIconButton-root {
+    padding: 6px; /* Reduce button size for smaller screens */
+  }
+}
+
+@media (min-width: 600px) {
+  .topbar {
+    left: 280px !important;
+    width: 1145px !important;
+  }
+}
+.legend{
+  position: relative;
+  display:none;
+}
+@media (max-width: 728px) {
+.mipi{
+  position: relative;
+  left: -250px;
+  font-size: 25px;
+}
+.mapa{
+  width: 1000px;
+  position:relative;
+  
+  height: 700px;
+}
+.region{
+  position: relative;
+  left: 40px;
+}
+.piepara{
+  width: 200px;
+}
+.barba{
+  width: 200px;
+}
+.chre{
+  position: relative;
+  left: -320px;
+  font-size: 20px;
+}
+.chre1{
+  position: relative;
+  left: -320px;
+  font-size: 10px;
+}
+.maep{
+ 
+  height: 500px;
+  width: 100%;
+  z-index: 1;
+}
+}
+.piepara{
+  width: 70%;
+}
+.barba{
+  width: 70%;
+}
+.chre1{
+ font-size: 30px;
+}
+.maep{
+ 
+  height: 800px;
+  width: 100%;
 }

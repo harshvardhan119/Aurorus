@@ -1,0 +1,77 @@
+/* ForecastForm.css */
+.forecast-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .forecast-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .forecast-select {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .forecast-error {
+    color: red;
+  }
+  
+  .forecast-data {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 20px;
+    padding: 20px;
+    color: black;
+  }
+  
+ 
+  @media (max-width: 728px) {
+    .forecast-select,
+    .forecast-button {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .forecast-data {
+      font-size: 16px;
+    }
+    .hi{
+        margin-top: 20px;
+        text-align: left;
+        font-size: 50x;
+        color: rgb(255, 255, 255);  
+    }
+  }
+         .hi{
+    
+            margin-top: 20px;
+            text-align: left;
+            font-size: 20px;
+            color: black;  
+
+}
+@media (max-width: 728px) {
+    .hi{
+        margin-top: 20px;
+        text-align: left;
+        font-size: 5x;
+        color: rgb(0, 0, 0);  
+        position: relative;
+        left: 60px;
+        width: 300px;
+    }
+  }

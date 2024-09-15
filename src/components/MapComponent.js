@@ -14,15 +14,7 @@ const data = {
         report: "Increase reservoir capacity by 20% to meet future demands. Introduce advanced water conservation practices."
       }
     },
-    {
-      name: "Monthly",
-      data: {
-        predicted_year: 2025,
-        current_requirement: 400,
-        predicted_requirement: 460,
-        report: "Water recycling systems should be implemented in urban areas. Encourage rainwater harvesting in rural zones."
-      }
-    },
+ 
     {
       name: "Quaterly",
       data: {
@@ -32,15 +24,7 @@ const data = {
         report: "Optimize irrigation practices and invest in desalination technologies to reduce water stress."
       }
     },
-    {
-      "name": "Half Yearly",
-      "data": {
-        "predicted_year": 2025,
-        "current_requirement": 280,
-        "predicted_requirement": 330,
-        "report": "Explore inter-state water transfer to balance shortages. Regularly maintain and modernize existing reservoirs."
-      }
-    },
+   
     {
       "name": "Yearly",
       "data": {
@@ -115,7 +99,7 @@ const MapComponent = ({ statesData }) => {
     });
     layer.bringToFront();
   
-    setDens(` ${layer.feature.properties.density}`);
+    setDens( `${layer.feature.properties.density}`);
   }, []);
 
   const resetHighlight = useCallback((e) => {
@@ -182,8 +166,8 @@ const MapComponent = ({ statesData }) => {
   }, [statesData, style, onEachFeature, getColor]);
 
   return (
-    <div style={{ position: 'relative',}}>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", fontSize:"30px"}}><a>percapita water requirement-</a>{dens}</div>
+    <div style={{ position: 'relative',height:"200px",width:"700px"}} className='mo'  >
+      <div className='per'   ><a>Percapita water requirement-</a><a>{dens}</a></div>
      
           <select 
           value={selectedState} 
@@ -199,7 +183,8 @@ const MapComponent = ({ statesData }) => {
         </select>
       <MapContainer
         id="map"
-        style={{ height: '800px', width: '100%' }}
+      
+       className="mi"
         center={[20, 77]} // Center the map on India
         zoom={5}
         ref={mapRef}
@@ -216,18 +201,20 @@ const MapComponent = ({ statesData }) => {
           ref={geojsonRef}
         />
       </MapContainer>
-      <div className='legend' style={{position: 'absolute', bottom: 550, right: -150, backgroundColor: 'white', padding: '10px', borderRadius: '5px'}}>
-        <div style={{backgroundColor:"#ade8f4",height:"20px",width:"100px",marginBottom: '5px'}}><a>10</a></div>
-        <div style={{backgroundColor:"#90e0ef",height:"20px",width:"100px",marginBottom: '5px'}}><a>20</a></div>
-        <div style={{backgroundColor:"#48cae4",height:"20px",width:"100px",marginBottom: '5px'}}><a>40</a></div>
-        <div style={{backgroundColor:"#00b4d8",height:"20px",width:"100px",marginBottom: '5px'}}><a>50</a></div>
+      {/* <h1 style={{fontSize:'15px',position:'relative',left:'300px',bottom:800,width:'250px'}}>Percapita water consumption <a style={{marginLeft:'50px'}}>in Litre</a></h1> */}
+      {/* <div className='legend' >
+        
+        <div style={{backgroundColor:"#ade8f4",height:"20px",width:"100px",marginBottom: '5px'}}><a >10 </a></div>
+        <div style={{backgroundColor:"#90e0ef",height:"20px",width:"100px",marginBottom: '5px'}}><a>20 </a></div>
+        <div style={{backgroundColor:"#48cae4",height:"20px",width:"100px",marginBottom: '5px'}}><a>40 </a></div>
+        <div style={{backgroundColor:"#00b4d8",height:"20px",width:"100px",marginBottom: '5px'}}><a>50 </a></div>
         <div style={{backgroundColor:"#0096c7",height:"20px",width:"100px",marginBottom: '5px'}}><a>60</a></div>
-        <div style={{backgroundColor:"#0077b6",height:"20px",width:"100px",marginBottom: '5px'}}><a>70</a></div>
-        <div style={{backgroundColor:"#023e8a",height:"20px",width:"100px",marginBottom: '5px'}}><a>90</a></div>
-        <div style={{backgroundColor:"#03045e",height:"20px",width:"100px"}}><a>100</a></div>
+        <div style={{backgroundColor:"#0077b6",height:"20px",width:"100px",marginBottom: '5px'}}><a>70 </a></div>
+        <div style={{backgroundColor:"#023e8a",height:"20px",width:"100px",marginBottom: '5px'}}><a>90 </a></div>
+        <div style={{backgroundColor:"#03045e",height:"20px",width:"100px"}}><a>100 </a></div>
        
      
-      </div>
+      </div> */}
     </div>
   );
 };

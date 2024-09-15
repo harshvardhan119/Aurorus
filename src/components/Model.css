@@ -1,0 +1,67 @@
+/* Model.css */
+
+/* Style for the form container */
+.form-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 8px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    
+  }
+  
+  /* Form Title Centered */
+  .form-container h2 {
+    text-align: center;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 200px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 70%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .button-container {
+    text-align: center;
+    padding-left: 400px;
+  }
+  
+  /* Responsive Styles for Mobile View */
+  @media (max-width: 768px) {
+    .form-container {
+      margin-left: 90px; /* Sidebar margin */
+      left: 0;
+      padding: 10px;
+      max-width: 100%;
+      font-size: 16px;
+    }
+  
+    .form-group {
+      padding-left: 20px; /* Align with the margin */
+    }
+  
+    .form-group input,
+    .form-group select {
+      width: 100%;
+    }
+  
+    .button-container {
+      padding-left: 0;
+    }
+  }
+  

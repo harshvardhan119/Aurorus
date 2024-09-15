@@ -138,14 +138,14 @@ const Chloroplethreservoir = ({ statesData }) => {
   }, [statesData, style, onEachFeature, getColor]);
 
   return (
-    <div style={{ position: 'relative',}}>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", fontSize:"30px"}}>Number of Reservoir{dens}</div>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", fontSize:"30px"}}>total capacity million cubic meters{cap}</div>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", fontSize:"30px"}}> Predicted filled capacity million cubic meters{capa}</div>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", fontSize:"30px"}}>Result{capb}</div>
-      <MapContainer
+    <div style={{ position: 'relative',}} className='chre1'>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}>Number of Reservoir{dens}</div>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}>total capacity million cubic meters{cap}</div>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}> Predicted filled capacity million cubic meters{capa}</div>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}>Result{capb}</div>
+      <MapContainer className='maep'
         id="map"
-        style={{ height: '800px', width: '100%' }}
+        
         center={[20, 77]} // Center the map on India
         zoom={5}
         ref={mapRef}
@@ -162,7 +162,7 @@ const Chloroplethreservoir = ({ statesData }) => {
           ref={geojsonRef}
         />
       </MapContainer>
-      <div className='legend' style={{position: 'absolute', bottom: 550, right: -150, backgroundColor: 'white', padding: '10px', borderRadius: '5px'}}>
+      {/* <div className='legend' style={{position: 'absolute', bottom: 550, right: -150, backgroundColor: 'white', padding: '10px', borderRadius: '5px'}}>
         <div style={{backgroundColor:"#FFEDA0",height:"20px",width:"100px",marginBottom: '5px'}}><a>10</a></div>
         <div style={{backgroundColor:"#FED976",height:"20px",width:"100px",marginBottom: '5px'}}><a>20</a></div>
         <div style={{backgroundColor:"#FEB24C",height:"20px",width:"100px",marginBottom: '5px'}}><a>40</a></div>
@@ -173,7 +173,7 @@ const Chloroplethreservoir = ({ statesData }) => {
         <div style={{backgroundColor:"#800026",height:"20px",width:"100px"}}><a>100</a></div>
         
       </div>
-     
+      */}
     </div>
   );
 };

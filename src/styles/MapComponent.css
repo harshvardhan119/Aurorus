@@ -1,4 +1,4 @@
-/* MapComponent.css */
+MapComponent.css
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
@@ -70,4 +70,38 @@
     line-height: 18px;
     color: #555;
   }
+  #map{
+    height: 700px;
+      width: 100%;
+      position: absolute;
+      
+  }
+  .per{
+    padding-top:10px ;
+    
+    position:relative;
+    bottom:20px;
+     font-size:30px;
+     left:0px;
+  }
   
+  @media (max-width: 728px) {
+    .mo{
+      left: -250px;
+      position: relative;
+      z-index: 1;
+      
+    }
+    #map{
+      height: 400px;
+      width: 370px;
+    }
+    .per{
+      padding-top:10px ;
+      
+      position:relative;
+      bottom:20px;
+       font-size:20px;
+       left:0px;
+    }
+  }
