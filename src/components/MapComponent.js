@@ -167,7 +167,7 @@ const MapComponent = ({ statesData }) => {
 
   return (
     <div style={{ position: 'relative',height:"200px",width:"700px"}} className='mo'  >
-      <div className='per'   ><a>Percapita water requirement-</a><a>{dens}</a></div>
+      <div className='per'   ><a>Percapita water requirement(Litre):</a><a>{dens}</a></div>
      
           <select 
           value={selectedState} 

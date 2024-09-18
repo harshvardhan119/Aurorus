@@ -139,10 +139,10 @@ const Chloroplethreservoir = ({ statesData }) => {
 
   return (
     <div style={{ position: 'relative',}} className='chre1'>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}>Number of Reservoir{dens}</div>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}>total capacity million cubic meters{cap}</div>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}> Predicted filled capacity million cubic meters{capa}</div>
-      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}>Result{capb}</div>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}><b>Number of Reservoir:</b>{dens}</div>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}><b>Total Current Capacity (MCM):</b>{cap}</div>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}> <b>Predicted filled capacity 1-2 weeks(MCM):</b>{capa}</div>
+      <div className='per'   style={{paddingTop: '10px',position:"relative",bottom:"20px", }}><b>Result:</b>{capb}</div>
       <MapContainer className='maep'
         id="map"
         
