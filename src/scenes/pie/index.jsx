@@ -31,7 +31,7 @@ const Pie = () => {
         <PieChart />
       </Box>
       <h1>Detail of Pie Chart</h1>
-      <p style={{marginLeft:"20px" }} className="piepara">
+      <p style={{marginLeft:"20px",fontSize:"30px" }} className="piepara">
 
 
 The pie chart above dynamically fetches real-time data to display water requirements across the four major regions of India: North, South, East, and West. The northern region, encompassing states like Uttar Pradesh, Punjab, and Haryana, currently exhibits the highest water demand, contributing around 40% of the total requirement due to its large population and intensive agricultural activities.</p>
