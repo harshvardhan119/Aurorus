@@ -55,7 +55,9 @@ The project involves analyzing the storage capabilities of reservoirs and provid
 2. **Access the Application:**
     Open your browser and navigate to `http://localhost:3000` to view the dashboard.
 
-## Contributing
+
+## Deployed link
+https://main--extraordinary-kulfi-82379a.netlify.app
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss potential improvements.
 ## images
