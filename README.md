@@ -58,4 +58,9 @@ The project involves analyzing the storage capabilities of reservoirs and provid
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss potential improvements.
+## images
 
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
