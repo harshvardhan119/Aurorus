@@ -31,22 +31,10 @@ The project involves analyzing the storage capabilities of reservoirs and provid
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/yourusername/water-resources-management-dashboard.git
+    git clone(https://github.com/harshvardhan119/Aurorus.git)
     ```
-2. **Navigate to the Project Directory:**
-    ```bash
-    cd water-resources-management-dashboard
-    ```
-3. **Install Backend Dependencies:**
-    ```bash
-    cd server
-    npm install
-    ```
-4. **Install Frontend Dependencies:**
-    ```bash
-    cd ../client
-    npm install
-    ```
+
+
 
 ## Configuration
 
