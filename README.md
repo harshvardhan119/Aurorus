@@ -46,17 +46,13 @@ The project involves analyzing the storage capabilities of reservoirs and provid
 
 ## Usage
 
-1. **Start the Backend Server:**
-    ```bash
-    cd server
-    npm start
-    ```
-2. **Start the Frontend Client:**
+
+1. **Start the Frontend Client:**
     ```bash
     cd ../client
     npm start
     ```
-3. **Access the Application:**
+2. **Access the Application:**
     Open your browser and navigate to `http://localhost:3000` to view the dashboard.
 
 ## Contributing
