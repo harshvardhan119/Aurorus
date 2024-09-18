@@ -69,11 +69,11 @@ const Model = () => {
       color: 'hsl(142, 70%, 50%)',
       data: data.map(({ year, predicted_requirement }) => ({ x: year.toString(), y: predicted_requirement })),
     },
-    {
-      id: 'Actual Requirement',
-      color: 'hsl(330, 70%, 50%)',
-      data: data.map(({ year, actual_requirement }) => ({ x: year.toString(), y: actual_requirement })),
-    },
+    // {
+    //   id: 'Actual Requirement',
+    //   color: 'hsl(330, 70%, 50%)',
+    //   data: data.map(({ year, actual_requirement }) => ({ x: year.toString(), y: actual_requirement })),
+    // },
   ];
 
   // Chart component
@@ -203,7 +203,7 @@ const Model = () => {
             <th>Year</th>
             <th>Baseline</th>
             <th>Predicted Requirement</th>
-            <th>Actual Requirement</th>
+            {/* <th>Actual Requirement</th> */}
           </tr>
         </thead>
         <tbody>
@@ -212,7 +212,7 @@ const Model = () => {
               <td>{year}</td>
               <td>{baseline.toFixed(4)}</td>
               <td>{predicted_requirement.toFixed(4)}</td>
-              <td>{actual_requirement.toFixed(4)}</td>
+              {/* <td>{actual_requirement.toFixed(4)}</td> */}
             </tr>
           ))}
         </tbody>
