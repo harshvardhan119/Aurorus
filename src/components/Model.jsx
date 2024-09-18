@@ -37,7 +37,7 @@ const Model = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://127.0.0.1:8000/calculate', {
+      const response = await fetch('https://backendaurorus.vercel.app/calculate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
